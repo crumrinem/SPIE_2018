@@ -1,0 +1,184 @@
+% spectra - can't have defs with numbers in these so just keep to copy in
+
+% BK14$_{95}\times$BK14$_{95}$
+% BK14$_{95}\times$BK14$_{150}$
+% BK14$_{150}\times$BK14$_{150}$
+
+% W$_{23}\times$BK14$_{95}$
+% W$_{23}\times$BK14$_{150}$
+% P$_{30}\times$BK14$_{95}$
+% P$_{30}\times$BK14$_{150}$
+% W$_{33}\times$BK14$_{95}$
+% W$_{33}\times$BK14$_{150}$
+
+% BK14$_{150}\times$P$_{217}$
+% BK14$_{150}\times$P$_{353}$
+
+% macros for the constraint numbers here to make sure all consistent
+
+% from paper_plots_bk15(13) (like_baseline)
+\def\rrange{0.020^{+0.021}_{-0.018}}
+\def\rul{0.072}
+\def\rztop{0.66}
+\def\rztopps{18}
+
+\def\Adrange{4.6^{+1.1}_{-0.9}}
+\def\Adcentval{4.6}
+\def\Adul{6.7}
+
+\def\Asrange{1.0^{+1.2}_{-0.8}}
+\def\Ascentval{1.0}
+\def\Asul{3.7}
+
+% from paper_plots_bk15(19) (find_mlmodel)
+\def\rmlm{0.020}
+\def\Asmlm{1.5}
+\def\Admlm{4.7}
+\def\Bsmlm{-3.0}
+\def\asmlm{-0.27}
+\def\Bdmlm{1.6}
+\def\admlm{-0.58}
+\def\emlm{-0.38}
+
+% from paper_plots_bk15(20) (find_mlmodel_chi2)
+\def\chitwo{760}
+\def\chitwodc{756}
+\def\chitwoptenom{0.06}
+\def\chitwoptesim{0.19}
+\def\chioneptesim{0.23}
+
+\def\Ad{A_\mathrm{d}}
+\def\Adf{A_\mathrm{d,353}}
+% it has to be A_sync to avoid confusion with amplitude of lcdm scalars...
+\def\As{A_\mathrm{sync}}
+\def\Asf{A_\mathrm{sync,23}}
+
+\def\Bd{\beta_\mathrm{d}}
+\def\Bs{\beta_\mathrm{s}}
+
+\def\ad{\alpha_\mathrm{d}}
+\def\as{\alpha_\mathrm{s}}
+
+\def\dd{\Delta_\mathrm{d}}
+\def\ddp{\Delta'_\mathrm{d}}
+
+% experiments
+\def\act{ACT} % Jo Dunkley asked to change to this form rather than {\sc ACT}
+\def\bicep{BICEP}
+\def\bolocam{{\sc Bolocam}}
+\def\dasi{DASI}
+\def\python{{\sc Python}}
+\def\bicepone{{\sc BICEP1}}
+\def\biceptwo{{\sc BICEP2}}
+\def\bicepthree{{\sc BICEP3}}
+\def\biceparray{{\sc BICEP} Array}
+\def\spud{{\sc Spud}}
+\def\spudone{{\sc Spud1}}
+\def\spudsix{{\sc Spud6}}
+\def\keck{{\it Keck}}
+\def\keckarray{{\it Keck Array}}
+\def\bk{\bicep/\keck}
+\def\BKfourteen{{BK14}}
+\def\BKthirteen{{BK13}}
+\def\planck{{\it Planck}} % They DO italicize
+\def\quiet{QUIET}
+\def\spider{SPIDER}
+\def\acbar{{\sc Acbar}}
+\def\QUAD{QUAD}
+\def\cbi{CBI}
+\def\capmap{CAPMAP}
+\def\maxipol{MAXIPOL}
+\def\archeops{{\it Archeops}}
+\def\cmbpol{{\sc CMB}pol}
+\def\ebex{EBEX}
+\def\boom{BOOMERANG}
+\def\wmap{WMAP}
+\def\spt{SPT}
+\def\sza{{\sc SZA}}
+\def\polarbear{POLARBEAR}
+\def\abs{ABS}
+\def\actpol{ACTPOL}
+\def\sptpol{{\sc SPTpol}}
+\def\class{CLASS}
+\def\piper{PIPER}
+\def\spass{S-PASS}
+
+% code
+\def\cmbfast{{\tt CMBFAST}}
+\def\camb{CAMB}
+\def\xfaster{{\tt XFASTER}}
+\def\anafast{{\tt anafast}}
+\def\synfast{{\sc synfast}}
+\def\healpix{{\sc healp}ix}
+\def\lenspix{{\sc lenspix}}
+\def\master{MASTER}
+\def\spice{{\tt Spice}}
+\def\gcp{{\tt gcp}}
+
+% units and symbols
+\newcommand{\ukrts}{ $\mu\mathrm{K}_{\mathrm{\mbox{\tiny\sc cmb}}}\sqrt{\mathrm{s}}$}
+\newcommand{\ukrjrts}{ $\mu\mathrm{K}_{\mathrm{\mbox{\tiny\sc rj}}}\sqrt{\mathrm{s}}$ }
+\newcommand{\ukcmbrts}{ $\mu\mathrm{K}_{\mathrm{\mbox{\tiny\sc cmb}}}\sqrt{\mathrm{s}}$ }
+\def\uk{$\mu{\mathrm K}$}
+\def\uksq{$\mu{\mathrm K^2}$}
+\def\ukcmb{$\mu{\mathrm K}_{\mathrm{\mbox{\tiny\sc cmb}}}$}
+\def\ukrj{${{\mu\mathrm{K}_{\mathrm{\mbox{\tiny\sc rj}}}}}$}
+\def\deg{^\circ}
+\def\emode{$E$-mode}
+\def\bmode{$B$-mode}
+\newcommand{\cl}{$\mathcal{C}_\ell$ }
+\def\clstar{\ell \left( \ell + 1 \right) C_l / 2 \pi}
+\def\lcdm{$\Lambda$CDM}
+\def\grad{{\vec \nabla}}
+\def\hii{H{\sc ii}}
+
+% general text
+\def\etal{{\em et al.}}
+
+% papers
+%\def\bI{\biceptwo\ Collaboration~I}
+%\def\bV{\biceptwo\ \& Keck Collaborations~V}
+%\def\piXXX{Planck Collaboration Int.~XXX}
+\def\bI{BK-I}
+\def\bV{BK-V}
+\def\piXXX{PIP-XXX}
+
+% Journal names
+\def\ieeesc{IEEE Trans.\ Appl.\ Supercon.}
+\def\sovast{Sov.\ Astron.}
+\def\aap{Astron.\ Astrophys.}
+\def\ap{Appl.\  Phys.}
+\def\apl{Appl.\ Phys.\ Lett.}
+\def\aj{Astron.\ J.}
+\def\apj{Astrophys.\ J.}
+\def\apjl{Astrophys.\ J.\ Lett.}
+\def\apjs{Astrophys.\ J.\ Suppl.\ Ser.}
+\def\astropart{Astropart.\ Phys.}
+\def\baas{Bull. Am. Astron. Soc.}
+\def\jap{J.\ Appl.\  Phys.}
+\def\jcap{J.\ Cosmol.\ Astropart.\ Phys.}
+\def\jetplett{JETP\ Lett.}
+\def\nat{Nature}
+\def\mnras{Mon.\ Not.\ R.\ Astron.\ Soc.}
+\def\nima{Nucl.\ Instrum.\ Methods\ Phys.\ Res.,\ Sect.\ A}
+\def\newastr{New\ Astron.}
+\def\newastrev{New\ Astron.\ Rev.}
+\def\nucphysb{Nucl.\ Phys.\ B}
+\def\nucphysbsupp{Nucl.\ Phys.\ B\ Proc. Supp.}
+\def\nuovocim{Il\ Nuovo\ Cim.}
+\def\pl{Phys.\ Lett.}
+\def\plb{Phys.\ Lett.\ B}
+\def\physrep{Phys.\ Rep.}
+\def\physscripta{Phys.\ Scr.}
+\def\pra{Phys.\ Rev.\ A}
+\def\prb{Phys.\ Rev.\ B}
+\def\prc{Phys.\ Rev.\ C}
+\def\prd{Phys.\ Rev.\ D}
+\def\pre{Phys.\ Rev.\ E}
+\def\prl{Phys.\ Rev.\ Lett.}
+\def\prthphys{Prog.\ Theor.\ Phys.}
+\def\pspie{Proc.\ Soc.\ Photo-Opt.\ Instrum.\ Eng.}
+\def\rmp{Rev.\ Mod.\ Phys.}
+\def\rsi{Rev.\ Sci.\ Instr.}
+\def\sci{Science}
+

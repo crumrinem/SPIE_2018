@@ -5,16 +5,120 @@
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\input{defs}
+
 
 \title{BICEP Array cryostat and mount design}
 
-\author[a]{Michael Crumrine}
-\author[b]{}
-\affil[a]{School of Physics and Astronomy, University of Minnesota,
-Minneapolis, MN 55455, USA}
-\affil[b]{Affiliation2, Address, City, Country}
 
-\authorinfo{Further author information: (Send correspondence to A.A.A.)\\A.A.A.: E-mail: aaa@tbk2.edu, Telephone: 1 505 123 1234\\  B.B.A.: E-mail: bba@cmp.com, Telephone: +33 (0)1 98 76 54 32}
+
+
+
+
+\author{Michael Crumrine}
+\author{\keckarray\ and \biceptwo\ Collaborations: P.~A.~R.~Ade}
+\author{Z.~Ahmed}
+\author{R.~W.~Aikin}
+\author{K.~D.~Alexander}
+\author{D.~Barkats}
+\author{S.~J.~Benton}
+\author{C.~A.~Bischoff}
+\author{J.~J.~Bock}
+\author{R.~Bowens-Rubin}
+\author{J.~A.~Brevik}
+\author{I.~Buder}
+\author{E.~Bullock}
+\author{V.~Buza}
+\author{J.~Connors}
+\author{J.~Cornelison}
+\author{B.~P.~Crill}
+\author{M.~Dierickx}
+\author{L.~Duband}
+\author{C.~Dvorkin}
+\author{J.~P.~Filippini}
+\author{S.~Fliescher}
+\author{J.~Grayson}
+\author{G.~Hall}
+\author{M.~Halpern}
+\author{S.~Harrison}
+\author{S.~R.~Hildebrandt}
+\author{G.~C.~Hilton}
+\author{H.~Hui}
+\author{K.~D.~Irwin}
+\author{J.~H.~Kang}
+\author{K.~S.~Karkare}
+\author{E.~Karpel}
+\author{J.~P.~Kaufman}
+\author{B.~G.~Keating}
+\author{S.~Kefeli}
+\author{S.~A.~Kernasovskiy}
+\author{J.~M.~Kovac}
+\author{C.~L.~Kuo}
+\author{K.~Lau}
+\author{N.~A.~Larsen}
+\author{E.~M.~Leitch}
+\author{M.~Lueker}
+\author{K.~G.~Megerian}
+\author{L.~Moncelsi}
+\author{T.~Namikawa}
+\author{H.~T.~Nguyen}
+\author{R.~O'Brient}
+\author{R.~W.~Ogburn~IV}
+\author{S.~Palladino}
+\author{C.~Pryke}
+\author{B.~Racine}
+\author{S.~Richter}
+\author{R.~Schwarz}
+\author{A.~Schillaci}
+\author{C.~D.~Sheehy}
+\author{A.~Soliman}
+\author{T.~St.~Germaine}
+\author{Z.~K.~Staniszewski}
+\author{B.~Steinbach}
+\author{R.~V.~Sudiwala}
+\author{G.~P.~Teply}
+\author{K.~L.~Thompson}
+\author{J.~E.~Tolan}
+\author{C.~Tucker}
+\author{A.~D.~Turner}
+\author{C.~Umilt\`{a}}
+\author{A.~G.~Vieregg}
+\author{A.~Wandui}
+\author{A.~C.~Weber}
+\author{D.~V.~Wiebe}
+\author{J.~Willmert}
+\author{C.~L.~Wong}
+\author{W.~L.~K.~Wu}
+\author{E.~Yang}
+\author{K.~W.~Yoon}
+\author{C.~Zhang}
+
+
+\affil[1]{School of Physics and Astronomy, University of Minnesota, Minneapolis, MN 55455, USA}
+\affil[2]{School of Physics and Astronomy, Cardiff University, Cardiff, CF24 3AA, United Kingdom}
+\affil[3]{Kavli Institute for Particle Astrophysics and Cosmology, SLAC National Accelerator Laboratory,Menlo Park, CA 94025, USA}
+\affil[4]{Department of Physics, California Institute of Technology, Pasadena, CA 91125, USA}
+\affil[5]{Harvard-Smithsonian Center for Astrophysics, Cambridge, MA 02138, USA}
+\affil[6]{Department of Physics, University of Toronto, Toronto, Ontario, M5S 1A7, Canada}
+\affil[7]{Department of Physics, University of Cincinnati, Cincinnati, OH 45221, USA}
+\affil[8]{Jet Propulsion Laboratory, Pasadena, CA 91109, USA}
+\affil[9]{Minnesota Institute for Astrophysics, University of Minnesota, Minneapolis, MN 55455, USA}
+\affil[10]{Department of Physics, Harvard University, Cambridge, MA 02138, USA}
+\affil[11]{Service des Basses Temp´eratures, Commissariat `a l’Energie Atomique, 38054 Grenoble, France}
+\affil[12]{Department of Physics, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
+\affil[13]{Department of Astronomy, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
+\affil[14]{Department of Physics, Stanford University, Stanford, CA 94305, USA}
+\affil[15]{Department of Physics and Astronomy, University of British Columbia,Vancouver, British Columbia, V6T 1Z1, Canada}
+\affil[16]{National Institute of Standards and Technology, Boulder, CO 80305, USA}
+\affil[17]{Kavli Institute for Cosmological Physics, University of Chicago, Chicago, IL 60637, USA}
+\affil[18]{Department of Physics, University of California at San Diego, La Jolla, CA 92093, USA}
+\affil[19]{Leung Center for Cosmology and Particle Astrophysics, National Taiwan University, Taipei 10617, Taiwan}
+\affil[20]{Canadian Institute for Advanced Research, Toronto, Ontario, M5G 1Z8, Canada}
+\affil[21]{Physics Department, Brookhaven National Laboratory, Upton, NY 11973}
+\affil[22]{Department of Physics, Enrico Fermi Institute, University of Chicago, Chicago, IL 60637}
+
+
+\authorinfo{Further author information: (Send correspondence to M. Crumrine)\\M. Crumrine: E-mail: crumrine@umn.edu}
 
 % Option to view page numbers
 \pagestyle{empty} % change to \pagestyle{plain} for page numbers   
@@ -27,12 +131,12 @@ Minneapolis, MN 55455, USA}
 
 BICEP Array is a Cosmic Microwave Background (CMB) polarization experiment that
 will begin observing at the South Pole in early 2019. This experiment replaces
-the five BICEP2 style receivers that compose the Keck Array with four larger
-BICEP3 style receivers observing at six frequencies from 30 to 270GHz. The
+the five \bicep2 style receivers that compose the Keck Array with four larger
+\bicep3 style receivers observing at six frequencies from 30 to 270GHz. The
 95GHz and 150GHz receivers will continue to push the already deep BICEP/Keck
 CMB maps while the 30/40GHz and 220/270GHz receivers will constrain the
 synchrotron and galactic dust foregrounds respectively. Here we report on the
-design  and performance of the BICEP Array instruments focusing on the mount
+design  and performance of the \biceparray \ instruments focusing on the mount
 and cryostat systems.
 \end{abstract}
 
@@ -49,24 +153,57 @@ and cryostat systems.
 
 %Begin the Introduction below the Keywords. The manuscript should not have headers, footers, or page numbers. It should be in a one-column format. References are often noted in the text and cited at the end of the paper.
 
+\section{The \bk \ experiments}
+
+The \bk \ experiments are a staged series of microwave telescopes that observe
+the CMB from the geographic South Pole. Each successive generation of
+telescope builds upon the experience gained with the previous while providing
+increasingly sensitive data. The experiments target degree-scale B-mode
+polarization in the CMB which could have been generated by primordial
+gravitational waves during the epoch of inflation. Detection of this signal
+requires separating the Inflationary Gravitational Wave (IGW) component from
+foreground sources such as polarized galactic dust emission and galactic
+synchrotron radiation, as well as the gravitational lensing component.
+Foreground signal exhibits strong frequency dependence (see Figure
+\ref{fig:noilecv}) which allows these components to be isolated from the IGW
+signal by observing the microwave sky across a range of frequencies.
+\keckarray \ consists of five \bicep2 style receivers with observations spread
+across four frequency bands (95, 150, 220, and 270 GHz). In combination with the BICEP2 data the \keckarray \ has
+published the strictest constraint on this signal to date of $r<0.07$
+\cite{bk14}. \biceparray \ builds on the success of the \keckarray \ by
+deploying four \bicep3 style receivers and expanding observations into two
+additional frequency bands at 30, and 40 GHz. Extrapolating from achieved performance,
+\biceparray \ is projected to reach $\sigma(r)<0.004$, either detecting the IGW
+signal or improving the constraint to $r<0.008$. 
+
+
+
+
 
 \section{Cryostat Design}
 
 BICEP array continues the successful design philosophy of
-the previous Bicep / Keck receivers.An 80" tall vacuum shell contains two nested
-stages with nominal operating temperatures of 50K and 4K. A cross section of
+the previous Bicep / Keck receivers. An 80" tall vacuum shell contains two nested
+stages with nominal operating temperatures of 50K and 4K which accommodate
+optical elements and shield the sub-Kelvin receiver. A cross section of
 the cryostat is shown in Figure \ref{fig:cryostat}. The top section of the
-vacuum jacket is sealed by an HDPE window and houses a stack of Zotefoam filters which reduce infrared loading
-onto the colder stages. The intermediate 50K stage serves as a radiation
-shield for the interior 4K stage. The top of this stage accommodates an
-Alumina filter which further reduces infrared loading and the lower $\sim$70\%
-of the intermediate 50K stage is wrapped with a 0.04" thick magnetic shield
-layer composed of Amuneal A4K. The 4K stage provides radiation shielding for
-the sub-K focal plane and electronics while also housing two cold Alumina
-lenses and optical baffles.
+vacuum jacket houses the vacuum window and a stack of Zotefoam filters which reduce infrared loading
+onto the colder stages. The use of low-conductivity structural supports keeps
+the interior stages sufficiently supported while conducting only a small
+amount of heat from the room temperature vacuum vessel. These supports are
+described in more detail in section \ref{sec:thermal_architecture}.The
+intermediate 50K stage serves as a radiation shield for the interior 4K stage.
+The lower $\sim70\%$ of this stage is wrapped with a $0.04''$ thick magnetic
+shield composed of Amuneal A4K. The top of this stage additionally
+accommodates an Alumina filter to further reduce infrared loading onto the
+sub-Kelvin receiver. The 4K stage serves as a second radiation shield while
+also providing mounting interfaces for two Alumina lenses and optical
+baffling.
 
 
-The cryostat is designed to be disassembled by lifting off shells successively
+The cryostat design enables ease of access to the focal plane assembly without
+disturbing the majority of thermal joints or the back-end cabling. The
+cryostat disassembles by lifting off shells successively
 from the outside in, leaving a stand-alone base behind which contains the
 sub-Kelvin focal plane assembly, readout electronics, and the cooling system as shown in Figure
 \ref{fig:base}. In this state, the focal plane and detector modules may be
@@ -86,44 +223,38 @@ and difficult part matings to remain undisrupted.
 and second stages respectively of a Cryomech PT415-RM Pulse Tube cooler. This
 cryocooler is capable of maintaining a first stage temperature of $<45$K under
 a 40W load and a second stage temperature of $<4$K under a
-1.5W load. The interior stages must therefore be carefully shielded in order
-to stay within the thermal budget. 
+1.5W load. The cooler of these two stages is required to maintain a
+sufficiently cold temperature to allow the operation of a three stage Helium
+sorption fridge which cools the sub-Kelvin receiver. The interior stages must
+therefore be well insulated in order to stay within the thermal budget. Table
+\ref{tab:thermal} breaks down the thermal loading onto the 4K and 50K stages.
+Individual components are described below.
 
 
 The radiation absorbed by the interior stages is reduced by the use of Multi
-Layer Insulation wrapped around the outside of the 50K and 4K stages. Where
+Layer Insulation (MLI) wrapped around the outside of the 50K and 4K stages. Where
 there is insufficient room for uncompressed insulation, high emissivity
-Aluminum tape is used to decrease the radiation absorbed by the lower
-temperature surface. We calculate the total radiation loading absorbed by the
-50K and 4K stages respectively to be 2.75 W and 6.9 mW respectively.
-
-
-The radiation shields are additionally attached to higher temperature stages
-via a low thermal conductivity support system. The front end of each shell
-constrained by thin Ti-Al-4V straps which are flexible along the axial
-direction of the cryostat which sees substantial thermal contraction. At the
-back end, each stage is supported by six trusses each of which has two high
+Aluminum tape is used on parallel faces to decrease the radiation absorbed by the lower
+temperature surface. The radiation shields are additionally attached to higher temperature stages
+via a low thermal conductivity support system. The front end of each shell is
+constrained by thin Ti-Al-4V straps which are allowed to flex along the axial
+direction of the cryostat to absorb differential thermal contraction. At the
+back end the 50K and 4K stages are supported by six trusses. Each truss has two high
 tensile strength / thermal conductivity rods bonded to Aluminum blocks with
 Stycast epoxy. We use G10-FR4 for the backend supports between the Vacuum
 shell and the 50K radiation shield but switch to Carbon Fiber between the 50K
 and 4K shells due to the former's lower thermal conductivity at low
-temperatures. Figure \ref{fig:supports} shows these fabricated internal
-supports. We calculate the loading due to these supports to be $<2.85$W on the
-50K stage and $<0.157$W on the 4K stage. 
+temperatures. Figure \ref{fig:supports} shows fabricated examples of the
+front and back-end supports.
 
 In addition to providing radiation shielding and mount points for low
 temperature optics, the 50K and 4K stages provide natural heat sinks for the
-cryocables that connect the subK electronics to the exterior - room
-temperature - data acquisition system.
+cryocables that connect the sub-Kelvin electronics to the exterior - room
+temperature - data acquisition system. By sinking the cryocables to the 50K
+stage the conductive loading onto the 50K stage is significantly reduced.
+Likewise, the heatsinks on the 4K stage significantly reduce the conductive
+loading onto the sub-Kelvin receiver. 
 
-
-
-While the pulse tube maintains the temperatures of the radiation
-shields, the tiered focal plane assembly is cooled still further by a three stage Helium sorption
-fridge which cools the tiers to successively lower temperatures of $2.8$K,
-$340$mK and $<250$mK. Like the supports for the 4K radiation shield, the tiers
-of the focal plane assembly are separated by carbon fiber support trusses
-which have extremely low thermal conductivity.
 
 
 
@@ -143,16 +274,16 @@ which have extremely low thermal conductivity.
 
 The heat straps connecting the pulse tube cooler to the 50K and 4K stages of
 the cryostat needs to have large thermal conductance but also be fairly
-flexible to suppress vibrations transmitted to the focal plane. Bicep Array
-uses custom made OFHC Copper assemblies each composed of a large number of
-flexible Copper braids. As shown in Figure \ref{fig:heatstrap} each heat strap
-consists of two end blocks connected by a series of multi-layered braided
-straps. The braided straps comprise seven layers of OFHC braid
-pressure fused into a small diameter OFHC pipe section on either end. The
-pressure fusing is performed by a hydraulic press under a load of 40 Tons
-while external constraint is provided by a Steel die. We have been able to
-achieve thermal conductance of $G=600 \frac{\text{mW}}{\text{K}}
-\text{  @}4\text{K}$ per strap in laboratory tests. 
+flexible to suppress vibrations transmitted to the focal plane. \biceparray \ 
+uses custom made Oxygen Free High thermal Conductivity (OFHC) Copper
+assemblies each composed of multiple straps. As shown
+in Figure \ref{fig:heatstrap} each heat strap consists of two end blocks
+connected by a series of multi-layered braided wire straps. The braided straps
+comprise seven layers of OFHC braid pressure fused into a small diameter OFHC
+pipe section on either end. The pressure fusing is performed by a hydraulic
+press under a load of 20 Tons while external constraint is provided by a Steel
+die. We have been able to achieve thermal conductance of $G=600
+\frac{\text{mW}}{\text{K}} \text{  @}4\text{K}$ per strap in laboratory tests.
 
 The heat straps in the Bicep Array cryostat combine a number of these straps
 to achieve high thermal conductance. Two layers of braided straps are
@@ -169,79 +300,18 @@ stage of the pulse tube.
 
 \section{Mount}
 
-The larger size of the Bicep Array as compared to the Keck array it replaces
+The larger size of the \biceparray \ as compared to the \keckarray \ it replaces
 requires a larger motorized platform for operation. Designed by Eric Chauvin,
-the new Bicep Array mount uses the same three axis design as the previous
-Bicep / Keck experiments which augments the Azimuth and Elevation scans with
-rotation about the optical axis hereafter referred to as "Deck". A cross section of the new mount assembly is shown below in Figure
-\ref{fig:bamount}. As with previous Bicep and Keck experiments, the cryostats
+the new \biceparray \ mount uses the same three axis design as the previous
+\bk \ experiments which augments the azimuth and elevation axes with
+rotation about the boresight of the array. A
+cross section of the new mount assembly is shown below in Figure
+\ref{fig:bamount}. As with previous \bk \ experiments, the cryostats
 are enclosed within an accordion-like environmental shield which co-rotates in
 azimuth and flexes as the mount tips down in elevation. A separate central
-plate then co-rotates in deck and maintains the environmental seal as the mount
-rotates about its boresight. 
+plate provides a mounting interface for four optical baffles - one per
+receiver - and co-rotates with the receivers about the array boresight.
 
-The Bicep Array mount includes two separate rotary unions which allow
-continuous rotation about the azimuth and deck axes without the need for a
-cable wrap. These rotary unions were designed at DSTI and each contain 10
-Helium channels, eight of which connect the pulse tubes and their compressors
-while two channels serve as pressure guards. An additional Nitrogen channel
-provides a pressurized environment on the backside of a thin membrane
-structures which shield the receivers' HDPE windows from the Antarctic winter.
-Inclusion of slip rings at both ends of the union additionally provide data and power
-connections to electronics that co-rotate with the cryostats. These rotary
-unions allow the Helium compressors - required to operate the
-pulse tube coolers - to sit well below the mount structure in the
-stationary tower. Helium lines route upwards into the lower fixed half of the first
-rotary union and then out through the upper half which rotates in Azimuth
-along with the receivers. The hoses from the upper half are then routed through a
-short cable chain that provides flexure when rotating in elevation. A
-second rotary union is then similarly connected with the free section rotating
-about deck. 
-
-
-\section{Operations}
-
-The Bicep Array will consist of four receivers observing in 6 frequency bands.
-Two receivers will continue to observe in the 95 and 150 GHz bands where the
-Bicep/Keck group's maps are deepest and where combined foreground
-signal is at a minimum. These will be augmented by two dual-band receivers at
-30/40 GHz and 220/270 GHz with the two frequencies interleaved in a
-checkerboard pattern. With the increased sensitivity at 95 and 150 GHz these
-two additional receivers will be required to push constraints on polarized
-emission from galactic synchrotron and dust further than the currently available data.
-Galactic synchrotron is already detected at modest signficiance in the
-Bicep/Keck data. The 30/40 GHz receiver will extend the observations into two
-new bands at which the synchrotron foreground is expected to dominate. The
-Keck array is already observing in the 220 and 270 GHz bands.  However with
-significantly increased throughput and a detector count of over 9 times the
-entire Keck Array, the dual band 220/270 GHz Bicep Array receiver will rapidly
-eclipse the sensitivity of the Keck Array and produce better constraints on
-the polarized emission from galactic dust. In only a few days of observation,
-this receiver will surpass the dust sensitivity of Planck's 353 GHz data in
-the Bicep/Keck field. 
-
-\subsection{Scan Strategy}
-
-The observing power of Bicep Array will continue to focus on the same $\sim400
-\text{ deg}^2$ patch of sky as the rest of the Bicep Keck data. By directly
-observing cosmological foregrounds with the new dual band receivers in the
-patch at which the Bicep/Keck data is already the deepest we will be able to
-directly constrain these foregrounds in our own patch of sky, significantly
-reducing the effect of any spatial variation in the foregrounds' spectral
-energy distribution. Increasing foreground constraints will be complemented by
-simultaneously increasing sensitivity to $r$ with the single band receivers. 
-
-The sensitivity of these two dual band receivers also suggests a number of
-alternate scan strategies. Figure \ref{fig:newscans} shows two alternate sky
-patches which the Bicep Array will observe.
-
-\textbf{Should probably include something about the new scan patches but need
-to see if I can actually take it from the proposal or not. Also these scans
-could techincally be done now, they aren't all of a sudden availible}
-The freedom of rotation afforded by these rotary joints will allow
-Bicep Array to pursue additional scanning modes and strategies. One such
-strategy is a Bicep Array Sky Survey covering $\sim20\%$ of the sky as
-shown below in \ref{fig:newscans}.
 
 \begin{figure} [hb]
 	\begin{center}
@@ -253,6 +323,57 @@ shown below in \ref{fig:newscans}.
 	mount.}
 	\label{fig:bamount}
 \end{figure}
+
+
+
+The \biceparray mount includes two separate rotary unions which allow
+continuous rotation about the azimuth and deck axes without the need for a
+cable wrap. These rotary unions were designed at DSTI and each contain 10
+Helium channels. Eight of these connect the pulse tubes and their compressors
+while two channels serve as pressure guards. An additional Nitrogen channel
+provides a pressurized environment on the backside of thin membrane
+structures which shield the receivers' vacuum windows from the Antarctic winter.
+Inclusion of slip rings at both ends of the union additionally provide data and power
+connections to electronics fixed to the same structure as the cryostats. These rotary
+unions allow the Helium compressors - required to operate the
+pulse tube coolers - to sit well below the mount structure in the
+stationary tower. Helium lines route upwards into the lower fixed half of the first
+rotary union and then out through the upper half which rotates in Azimuth
+along with the receivers. The hoses from the upper half are then routed through a
+short cable chain that provides flexure when rotating in elevation. The
+second rotary union is then similarly connected with the free section rotating
+about the array boresight.
+
+
+\section{Operations}
+
+\biceparray \ will consist of four receivers observing in 6 frequency bands.
+Two receivers will continue to observe in the 95 and 150 GHz bands where the
+\bk \ maps are deepest and where combined foreground
+signal is at a minimum. These will be augmented by two dual-band receivers at
+30/40 GHz and 220/270 GHz with the two frequencies interleaved in a
+checkerboard pattern. With the increased sensitivity at 95 and 150 GHz these
+two additional receivers will be required to push constraints on polarized
+emission from galactic synchrotron and dust further than the currently available data.
+The 30/40 GHz receiver will extend the observations into two
+new bands at which the synchrotron foreground is expected to dominate. The
+\keckarray \ is already observing in the 220 and 270 GHz bands.  However with
+significantly increased throughput and a detector count of over 9 times the
+entire \keckarray , the dual band 220/270 GHz Bicep Array receiver will rapidly
+eclipse current sensitivity. In only a few days of observation,
+this receiver will surpass the dust sensitivity of the \planck \ 353 GHz data in
+the \bk \ field. 
+
+The observing power of \biceparray will be concentrated on the same $\sim400
+\text{ deg}^2$ patch of sky as the existing \bk \ data. By directly
+observing cosmological foregrounds with the new dual band receivers in the
+patch at which the \bk \ data is already the deepest we will be able to
+directly constrain these foregrounds in our own patch of sky, significantly
+reducing the effect of any spatial variation in the foregrounds' spectral
+energy distribution. Increasing foreground constraints will be complemented by
+simultaneously increasing sensitivity to $r$ with the single band receivers. 
+
+
 
 
 
