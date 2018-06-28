@@ -192,11 +192,11 @@ sensitivity. A graphical progression from \bicep2\ to \biceparray\ is shown
 below in Fig.~\ref{fig:progression}. Foreground signals exhibit strong
 frequency dependence which allows these components to be isolated from the IGW
 signal by observing the microwave sky across a range of frequencies.
-\keckarray\ consists of five \bicep2 style receivers with observations spread
+\keckarray\ consists of five \bicep2 style receivers\cite{ogburn2010,sheehy2010} with observations spread
 across four frequency bands (95, 150, 220, and 270 GHz). The combination of
  \bicep2 and \keckarray\ data has produced the strictest constraint on
 this signal to date of $r<0.07$ \cite{bk_vi}. \biceparray\ builds on the success
-of the \keckarray\ by deploying four \bicep3 style receivers and expanding
+of the \keckarray\ by deploying four \bicep3 style receivers\cite{ahmed2014} and expanding
 observations into two additional frequency bands at 30 and 40 GHz.
 Extrapolating from achieved performance, \biceparray\ is projected to reach
 $\sigma(r)<0.004$, either detecting the IGW signal or improving the constraint
@@ -210,7 +210,7 @@ to $r<0.008$.
 \biceparray\ continues the successful design philosophy of
 the previous \bk\ receivers. An 80" tall vacuum shell contains two nested
 stages with nominal operating temperatures of 50K and 4K which accommodate
-optical elements and shield the sub-Kelvin receiver. A cross section of
+optical elements and shield a sub-Kelvin focal plane. A cross section of
 the cryostat is shown in Fig.~\ref{fig:bavskeck}. The top section of the
 vacuum jacket houses the vacuum window and a stack of Zotefoam filters which reduce infrared loading
 onto the colder stages. The use of low-conductivity structural supports keeps
@@ -286,6 +286,7 @@ sufficiently cold temperature to allow the operation of a three-stage helium
 sorption fridge which cools the sub-Kelvin focal plane assembly. The interior stages must
 therefore be well insulated in order to stay within the thermal budget.
 
+
 \clearpage
 
 
@@ -293,7 +294,7 @@ The radiation absorbed by the interior stages is reduced by the use of
 multi-layer insulation (MLI) wrapped around the outside of the 50K and 4K
 stages. These MLI blankets are composed of many aluminized Mylar layers
 separated by polyester spacer layers. Where there is insufficient room for
-uncompressed insulation, high emissivity aluminum tape is used on parallel
+uncompressed insulation, low emissivity aluminum tape is used on parallel
 faces to decrease the radiation absorbed by the lower temperature surface.
 A low thermal conductivity support system keeps the three stages thermally
 insulated from each other and provides structural support. The front end of
@@ -308,6 +309,37 @@ conductivity at low temperatures. Figure~\ref{fig:supports} shows fabricated
 examples of the front and back-end supports.
 
 \begin{figure}[t]
+	\center
+\begin{tabular}{|c||c|c|}
+	\hline
+	 & 50k & 4k \\
+	 \hline
+	Radiation & 2.75w & .007w \\
+	Titanium Supports & 0.95w & 0.081w \\
+	G10 Supports & 1.9w & \\
+	Carbon Fiber Supports & & 0.076w\\
+	Cryocables & 1.43W & 0.12W \\
+	Infrared & 14W & 0.154W \\
+	\hline
+	Total & 21.04W & 0.386W \\
+	\hline
+\end{tabular}
+
+	\caption{Calculated loading from different components in the \biceparray\
+	cryostat. Thermal conductivity numbers taken from the NIST cryogenics
+	resource group\cite{nist} for most materials. Runyan and
+	Jones\cite{runyan2008} provide thermal conductivity measurements for
+	Graphlite carbon fiber at low temperatures. Loading due to cryocables
+	assumes twenty 100-way MDM cables. This number will be higher for the
+	150GHz receiver and lower for the 30/40 GHz receiver. Infrared loading
+	refers to optical power absorbed by the optical components. These numbers
+	are taken from the performance of \bicep3 and scaled if necessary to
+	account for slight changes in active area.}
+	\label{tab:loading}
+
+\end{figure}
+
+\begin{figure}[b]
 	\center
 	\includegraphics{supports.png}
 	\caption{\textbf{Left:} The top end titanium supports. These thin strips
@@ -327,7 +359,7 @@ cryocables that connect the sub-Kelvin electronics to the exterior
 room-temperature data acquisition system. By sinking the cryocables to the 50K
 stage, the conductive loading beyond the 50K stage is significantly reduced.
 Likewise, the heatsinks on the 4K stage further reduce the conductive
-loading into the sub-Kelvin assembly. 
+loading into the sub-Kelvin assembly.
 
 
 
@@ -356,10 +388,9 @@ contact resistance. Figure~\ref{fig:heatstrap} shows a fully assembled heat
 strap assembly that interfaces between the 4K radiation shield and the second
 stage of the pulse tube.
 
-\clearpage
 
 
-\begin{figure}[ht]
+\begin{figure}[t]
 \center
 \includegraphics{heatstraps.png}
 \caption{\textbf{Left:} A completed heat strap composed of 6 braided straps. A thin steel plate distributes the force of the bolts and nuts across the surface of the braid ends. \textbf{Right:} A single 7-layer braided strap. This strap is created by inserting layers of OFHC braid into a short OFHC tube and compressing under 20 tons of pressure in a hydraulic press.}
@@ -399,7 +430,6 @@ receiver---and co-rotates with the receivers about the array boresight.
 	\label{fig:bamount}
 \end{figure}
 
-\clearpage
 
 The \biceparray\ mount includes two separate rotary unions which allow
 continuous rotation about the azimuth axis and array boresight without the need for a
@@ -442,7 +472,7 @@ galactic synchrotron and dust further than the currently available data.
 The 30/40 GHz receiver will extend the observations into two
 new bands at which the synchrotron foreground is expected to dominate. The
 \keckarray\ is already observing in the 220 and 270 GHz bands.  However with
-significantly increased throughput and a detector count of over 9 times the
+significantly increased throughput and a detector count of over 8 times the
 entire \keckarray, the dual band 220/270 GHz \biceparray\ receiver will rapidly
 eclipse current sensitivity. In only a few days of observation,
 this receiver will surpass the dust sensitivity of the \planck\ 353 GHz data in
@@ -479,9 +509,9 @@ Raw sensitivity in the absence of foregrounds is also shown.}
 
 
 
-
+\clearpage
 % References
-\bibliography{cmb.bib,misc.bib,bicepkeck.bib} % bibliography data in report.bib
+\bibliography{cmb,misc,bicepkeck} % bibliography data in report.bib
 \bibliographystyle{spiebib} % makes bibtex use spiebib.bst
 
 \end{document} 
