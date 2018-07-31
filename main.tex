@@ -1,18 +1,17 @@
-\documentclass[]{spie}  %>>> use for US letter paper
+\documentclass[]{spie}
 
-\renewcommand{\baselinestretch}{1.0} % Change to 1.65 for double spacing
+\renewcommand{\baselinestretch}{1.0} 
  
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \input{defs}
+\usepackage{caption} 
+\usepackage{textcomp}
+\captionsetup[figure]{skip=10pt}
+\captionsetup[table]{skip=10pt}
 
-
-\title{\textsc{BICEP} Array cryostat and mount design}
-
-
-
-
+\title{BICEP Array cryostat and mount design}
 
 
 \author[a]{Michael Crumrine}
@@ -45,7 +44,7 @@
 \author[p]{G.~C.~Hilton}
 \author[d]{H.~Hui}
 \author[c,n,p]{K.~D.~Irwin}
-\author[n]{J.~H.~Kang}
+\author[n]{J.~Kang}
 \author[e,q]{K.~S.~Karkare}
 \author[n]{E.~Karpel}
 \author[r]{J.~P.~Kaufman}
@@ -54,13 +53,14 @@
 \author[n]{S.~A.~Kernasovskiy}
 \author[e,j]{J.~M.~Kovac}
 \author[c,n]{C.~L.~Kuo}
-\author[a]{K.~Lau}
 \author[q]{N.~A.~Larsen}
+\author[a]{K.~Lau}
 \author[q]{E.~M.~Leitch}
 \author[d]{M.~Lueker}
 \author[h]{K.~G.~Megerian}
 \author[d]{L.~Moncelsi}
 \author[s]{T.~Namikawa}
+\author[f,t]{C.~B.~Netterfield}
 \author[h]{H.~T.~Nguyen}
 \author[d,h]{R.~O'Brient}
 \author[c,n]{R.~W.~Ogburn~IV}
@@ -89,7 +89,7 @@
 \author[a]{J.~Willmert}
 \author[e,j]{C.~L.~Wong}
 \author[n,q]{W.~L.~K.~Wu}
-\author[n]{E.~Yang}
+\author[n]{H.~Yang}
 \author[c,n]{K.~W.~Yoon}
 \author[d]{C.~Zhang}
 
@@ -104,7 +104,7 @@
 \affil[h]{Jet Propulsion Laboratory, Pasadena, CA 91109, USA}
 \affil[i]{Minnesota Institute for Astrophysics, University of Minnesota, Minneapolis, MN 55455, USA}
 \affil[j]{Department of Physics, Harvard University, Cambridge, MA 02138, USA}
-\affil[k]{Service des Basses Temp´eratures, Commissariat `a l’Energie Atomique, 38054 Grenoble, France}
+\affil[k]{Service des Basses Temp\'{e}ratures, Commissariat \'{a} l’Energie Atomique, 38054 Grenoble, France}
 \affil[l]{Department of Physics, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \affil[m]{Department of Astronomy, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \affil[n]{Department of Physics, Stanford University, Stanford, CA 94305, USA}
@@ -120,7 +120,6 @@
 
 \authorinfo{Further author information: (Send correspondence to M. Crumrine)\\M. Crumrine: E-mail: crumrine@umn.edu}
 
-% Option to view page numbers
  
 \begin{document} 
 \maketitle
@@ -138,7 +137,6 @@ design  and performance of the \biceparray\ instruments focusing on the mount
 and cryostat systems.
 \end{abstract}
 
-% Include a list of keywords after the abstract 
 \keywords{Inflation, Gravitational Waves, Cosmology, BICEP, Keck Array, Polarization, BICEP Array  }
 
 \section{INTRODUCTION}
@@ -149,13 +147,12 @@ of the CMB---providing the first evidence for a Big Bang origin to the
 universe\cite{penzias1965,dicke1965}---experimental cosmology has become an extremely active subfield of physics.
 Subsequently the development of the $\Lambda$CDM cosmological model has seen
 tremendous success in its ability to accurately and self-consistently explain
-and predict experimental data. The $\Lambda$CDM model is, however, still
+and predict observational data. The $\Lambda$CDM model is, however, still
 incomplete and fails to explain the homogeneity and isotropy of our observable
 universe.  These issues can be resolved by an extension to the model in which
-the universe undergoes a period of exponential expansion known as inflation just after the
-initial Big Bang\cite{guth1981}. Various models of inflation exist, many of which predict that
-such an event would have generated a gravitational wave background.
-Interaction between these inflationary gravitational waves (IGWs) and the CMB
+the universe undergoes a period of exponential expansion known as inflation just after the beginning\cite{guth1981}. Various models of inflation exist, many of which predict that
+such an event would have generated an observable gravitational wave background.
+Interaction between these inflationary gravitational waves (IGWs) and the primordial plasma
 would have produced a characteristic curl-like polarization signal
 colloquially referred to as ``B-modes''. Measurement of this signal is
 generally characterized by the tensor to scalar ratio $r$, which can also be
@@ -166,7 +163,7 @@ inflationary models.
 	\center
 	\includegraphics[scale=0.5]{progression.pdf}
 	\caption{A graphical representation of the \bk\ experiments from
-	\bicep2\ through \biceparray. The middle and bottom rows show the increased focal plane size and density of the \bicep3 style receivers as compared to the \bicep2\ style. Different
+	\bicep2\ through \biceparray. The middle and bottom rows show the increased focal plane size and density of the \bicep3 style receivers as compared to \bicep2\ /\keck\ style. Different
 	frequencies are represented in the bottom row by individual colors with the lowest frequency
 	(30 GHz) visible in light red and the highest (270 GHz) visible in dark
 	blue.}
@@ -186,7 +183,7 @@ separation from these foregrounds.
 
 The \bk\ experiments are a staged series of microwave telescopes that observe
 the CMB from the geographic South Pole and target degree-scale B-mode
-polarization. Each successive generation of telescope builds upon the
+polarization. Each successive generation of telescopes builds upon the
 experience gained with the previous while simultaneously increasing
 sensitivity. A graphical progression from \bicep2\ to \biceparray\ is shown
 below in Fig.~\ref{fig:progression}. Foreground signals exhibit strong
@@ -194,13 +191,13 @@ frequency dependence which allows these components to be isolated from the IGW
 signal by observing the microwave sky across a range of frequencies.
 \keckarray\ consists of five \bicep2 style receivers\cite{ogburn2010,sheehy2010} with observations spread
 across four frequency bands (95, 150, 220, and 270 GHz). The combination of
- \bicep2 and \keckarray\ data has produced the strictest constraint on
-this signal to date of $r<0.07$ \cite{bk_vi}. \biceparray\ builds on the success
-of the \keckarray\ by deploying four \bicep3 style receivers\cite{ahmed2014} and expanding
+ \bicep2 and \keckarray\ data has produced the tightest constraint on
+this signal to date of $r<0.07$ ($95\%$ confidence)\cite{bk_vi}. \biceparray\ will build on the success
+of the \keckarray\ by deploying four \bicep3 style receivers\cite{ahmed2014}, and expanding
 observations into two additional frequency bands at 30 and 40 GHz.
 Extrapolating from achieved performance, \biceparray\ is projected to reach
 $\sigma(r)<0.004$, either detecting the IGW signal or improving the constraint
-to $r<0.008$. 
+to $r<0.008$ ($95\%$~confidence). 
 
 
 
@@ -208,22 +205,26 @@ to $r<0.008$.
 \section{Cryostat Design}
 
 \biceparray\ continues the successful design philosophy of
-the previous \bk\ receivers. An 80" tall vacuum shell contains two nested
+the previous \bk\ receivers. A 2 meter tall vacuum shell contains two nested
 stages with nominal operating temperatures of 50K and 4K which accommodate
-optical elements and shield a sub-Kelvin focal plane. A cross section of
-the cryostat is shown in Fig.~\ref{fig:bavskeck}. The top section of the
-vacuum jacket houses the vacuum window and a stack of Zotefoam filters which reduce infrared loading
-onto the colder stages. The use of low-conductivity structural supports keeps
-the interior stages sufficiently supported while conducting only a small
-amount of heat from the room temperature vacuum vessel. These supports are
-described in more detail in Sec.~\ref{sec:thermal_architecture}. The
-intermediate 50K stage serves as a radiation shield for the interior 4K stage.
-The lower $\sim70\%$ of the 50K stage is wrapped with a $0.04''$-thick magnetic
-shield composed of Amuneal A4K. The top of this stage additionally
-accommodates an alumina filter to further reduce infrared loading onto the
-sub-Kelvin receiver. The 4K stage serves as a second radiation shield while
-also providing mounting interfaces for two alumina lenses and optical
-baffling.
+optical elements and shield a sub-Kelvin focal plane. The design of the
+sub-kelvin structure and focal plane can be found in Hui. et.
+al.\cite{hui2018}, and Soliman. et. al.\cite{soliman2018}. A cross section of
+the cryostat is shown in Fig.~\ref{fig:bavskeck}. The top section of the vacuum
+jacket houses the vacuum window and a stack of Zotefoam filters which reduce
+infrared loading onto the colder stages. More information on the performance of
+this filtering scheme can be found in J.~Kang et.~al.\cite{kang2018}. The use
+of low-conductivity structural supports keeps the interior stages sufficiently
+supported while conducting only a small amount of heat from the room
+temperature vacuum vessel.  These supports are described in more detail in
+Sec.~\ref{sec:thermal_architecture}. The intermediate 50K stage serves as a
+radiation shield for the interior 4K stage.  The lower $\sim70\%$ of the 50K
+stage is wrapped with a $0.04''$-thick magnetic shield composed of
+Amuneal\cite{amuneal} A4K\textsuperscript{\textregistered}.  The top of this
+stage additionally accommodates an alumina filter to further reduce infrared
+loading onto the sub-Kelvin receiver. The 4K stage serves as a second radiation
+shield while also providing mounting interfaces for two alumina lenses and
+optical baffling.
 
 \begin{figure} [hb]
 	\begin{center}
@@ -234,7 +235,7 @@ baffling.
 	\biceparray\ receiver (right). The \biceparray\ receivers have double
 	the clear aperture and significantly increased focal plane density as
 	compared to the \keckarray\ receivers. \biceparray\ also increases the
-	width of the cryostat compared to \bicep3 in order to include more optical baffling at the
+	width of the cryostat compared to \bicep3 in order to include adequate optical baffling at the
 	lowest frequencies.}
 	\label{fig:bavskeck}
 \end{figure}
@@ -248,11 +249,11 @@ baffling.
 The cryostat design enables ease of access to the focal plane assembly without
 disturbing the majority of thermal joints or the back-end cabling. The
 cryostat disassembles by lifting off shells successively
-from the outside in, leaving a stand-alone base behind which contains the
+from the outside in, leaving behind a stand-along base which contains the
 sub-Kelvin focal plane assembly, readout electronics, and the cooling system as shown in
 Fig.~\ref{fig:base}. In this state, the focal plane and detector modules may be
 freely accessed for maintenance. Access to the
-underside of the focal plane and the readout electronics is provided by
+pulse tube, heat straps, and readout cabling is provided by
 hatches on the bottom side of the vacuum shell and 50K bases. This scheme
 significantly reduces the time required for disassembly when accessing the
 focal plane and re-assembly afterwards by allowing critical thermal junctions
@@ -278,48 +279,50 @@ and difficult part matings to remain undisrupted.
 \label{sec:thermal_architecture}
 
  The 50K and 4K radiation shields are cooled by the first
-and second stages of a Cryomech PT415-RM Pulse Tube cooler respectively. This
+and second stages of a Cryomech\cite{cryomech} PT415-RM Pulse Tube cooler respectively. This
 cryocooler is capable of maintaining a first stage temperature of $<45$K under
 a 40W load and a second stage temperature of $<4$K under a
 1.5W load. The cooler of these two stages is required to maintain a
 sufficiently cold temperature to allow the operation of a three-stage helium
-sorption fridge which cools the sub-Kelvin focal plane assembly. The interior stages must
-therefore be well insulated in order to stay within the thermal budget.
+sorption fridge which cools the sub-Kelvin focal plane assembly. The interior
+stages must therefore be well insulated in order to stay within the thermal
+budget. Various aspects of the thermal architecture are described below, Table
+\ref{tab:loading} provides a numerical breakdown of the estimated thermal loading onto
+the cold stages.
 
 
-\clearpage
 
 
 The radiation absorbed by the interior stages is reduced by the use of
 multi-layer insulation (MLI) wrapped around the outside of the 50K and 4K
-stages. These MLI blankets are composed of many aluminized Mylar layers
+stages. These MLI blankets are composed of many aluminized Mylar\textsuperscript{\textregistered} layers
 separated by polyester spacer layers. Where there is insufficient room for
-uncompressed insulation, low emissivity aluminum tape is used on parallel
+uncompressed insulation, we plan to use low emissivity aluminum tape on parallel
 faces to decrease the radiation absorbed by the lower temperature surface.
 A low thermal conductivity support system keeps the three stages thermally
 insulated from each other and provides structural support. The front end of
 each shell is constrained by thin Ti-Al-4V straps which allow flexing along the
 axial direction of the cryostat to absorb differential thermal contraction. At
 the back end, the 50K and 4K stages are each supported by six trusses. Each
-truss has two high tensile strength / thermal conductivity rods bonded to
-aluminum blocks with Stycast epoxy. We use G10-FR4 for the back-end supports
+truss has two high tensile strength, low thermal conductivity rods bonded to
+aluminum blocks with Stycast\textsuperscript{\textregistered} epoxy. We use G10-FR4 for the back-end supports
 between the vacuum shell and the 50K radiation shield but switch to carbon
 fiber between the 50K and 4K shells due to the latter's lower thermal
 conductivity at low temperatures. Figure~\ref{fig:supports} shows fabricated
 examples of the front and back-end supports.
 
-\begin{figure}[t]
+\begin{table}[b]
 	\center
 \begin{tabular}{|c||c|c|}
 	\hline
 	 & 50k & 4k \\
 	 \hline
-	Radiation & 2.75w & .007w \\
-	Titanium Supports & 0.95w & 0.081w \\
-	G10 Supports & 1.9w & \\
-	Carbon Fiber Supports & & 0.076w\\
+	Radiation & 2.75W & 0.007W \\
+	Titanium Supports & 0.95W & 0.081W \\
+	G10 Supports & 1.9W & \\
+	Carbon Fiber Supports & & 0.076W\\
 	Cryocables & 1.43W & 0.12W \\
-	Infrared & 14W & 0.154W \\
+	Infrared Loading & 14W & 0.154W \\
 	\hline
 	Total & 21.04W & 0.386W \\
 	\hline
@@ -337,7 +340,9 @@ examples of the front and back-end supports.
 	account for slight changes in active area.}
 	\label{tab:loading}
 
-\end{figure}
+\end{table}
+
+
 
 \begin{figure}[b]
 	\center
@@ -366,9 +371,9 @@ loading into the sub-Kelvin assembly.
 \section{Copper Braid Heat Straps}
 
 The heat straps connecting the pulse tube cooler to the 50K and 4K stages of
-the cryostat needs to have large thermal conductance but also be fairly
+the cryostat need to have large thermal conductance but also be fairly
 flexible to suppress vibrations transmitted to the focal plane. \biceparray\ 
-uses custom made oxygen-free high thermal conductivity (OFHC) copper
+plans to use custom made oxygen-free high thermal conductivity (OFHC) copper
 assemblies each composed of multiple straps. As shown
 in Fig.~\ref{fig:heatstrap} each heat strap consists of two end blocks
 connected by a series of multi-layered braided wire straps. The braided straps
@@ -376,7 +381,7 @@ comprise seven layers of OFHC braid pressure fused into a small diameter OFHC
 pipe section on either end. The pressure fusing is performed by a hydraulic
 press under a load of 20 tons with lateral constraint provided by a steel
 die. We have been able to achieve thermal conductance of $G=600
-\frac{\text{mW}}{\text{K}} \text{  @}4\text{K}$ per strap in laboratory tests.
+\frac{\text{mW}}{\text{K}}$ per strap at $4$K in laboratory tests.
 
 The heat straps in the \biceparray\ cryostat combine a number of these straps
 to achieve high total thermal conductance. Two layers of braided straps are
@@ -393,7 +398,11 @@ stage of the pulse tube.
 \begin{figure}[t]
 \center
 \includegraphics{heatstraps.png}
-\caption{\textbf{Left:} A completed heat strap composed of 6 braided straps. A thin steel plate distributes the force of the bolts and nuts across the surface of the braid ends. \textbf{Right:} A single 7-layer braided strap. This strap is created by inserting layers of OFHC braid into a short OFHC tube and compressing under 20 tons of pressure in a hydraulic press.}
+\caption{\textbf{Left:} A completed heat strap composed of 6 braid assemblies. A
+thin stainless steel plate distributes the force of the bolts and nuts across the surface
+of the braid ends. \textbf{Right:} A single 7-layer braided strap. This strap
+is created by inserting layers of OFHC braid into a short OFHC tube and
+compressing under 20 tons of pressure in a hydraulic press.}
 \label{fig:heatstrap}
 \end{figure}
 
@@ -401,15 +410,14 @@ stage of the pulse tube.
 \section{Mount and Operations}
 
 The larger size of the \biceparray\ as compared to the \keckarray\ it replaces
-requires a larger motorized platform for operation. Designed by Eric Chauvin,
-the new \biceparray\ mount uses the same three axis design as the previous
+requires a larger motorized platform for operation. The new \biceparray\ mount uses the same three-axis design as the previous
 \bk\ experiments which augments the azimuth and elevation axes with
 rotation about the boresight of the array. A
 cross section of the new mount assembly is shown below in Fig.~\ref{fig:bamount}.
 As with previous \bk\ experiments, the cryostats
 are enclosed within an accordion-like environmental shield which co-rotates in
 azimuth and flexes as the mount tips in elevation. A separate forward
-plate provides a mounting interface for four optical baffles---one per
+plate provides a mounting interface for four absorbative optical baffles---one per
 receiver---and co-rotates with the receivers about the array boresight.
 
 
@@ -417,14 +425,14 @@ receiver---and co-rotates with the receivers about the array boresight.
 	\begin{center}
 		\includegraphics{mount.png}
 	\end{center}
-	\caption{\textbf{Right:} A CAD rendering of the new \biceparray mount and cryostats. The surrounding
+	\caption{\textbf{Right:} A CAD rendering of the new \biceparray\ mount and cryostats. The surrounding
 	accordion-like environmental shield is shown in teal while the two rotary
 	unions are depicted in gray and can be seen along the central axis of the
 	mount. The large cylinders on the top side of the mount assembly are
 	the co-moving absorptive optical baffles that reduce sidelobe response. A fixed
 	ground shield (not shown) surrounds this mount assembly and reduces pickup from
 	ground-fixed sources. Black lines indicate the two rotary unions.
-	\textbf{Left:} One of the rotary unions from DSTI. Red caps denote the
+	\textbf{Left:} One of the rotary unions from DSTI\cite{dsti}. Red caps denote the
 	locations of helium lines The electrical and data connections
 	can be seen exiting either end of the union.}
 	\label{fig:bamount}
@@ -433,12 +441,11 @@ receiver---and co-rotates with the receivers about the array boresight.
 
 The \biceparray\ mount includes two separate rotary unions which allow
 continuous rotation about the azimuth axis and array boresight without the need for a
-cable wrap. These rotary unions were designed at DSTI, and each contain 10
+cable wrap (see Fig. \ref{fig:bamount}). These rotary unions were designed at DSTI\cite{dsti}, and each contain 10
 helium channels. Eight of these connect the pulse tubes and their compressors,
 while two channels serve as pressure guards. An additional nitrogen channel
-provides a pressurized environment on front end of the cryostats which shields
-the receivers' vacuum windows from the Antarctic winter.  Slip rings at both
-ends of the union additionally provide data and power connections to
+provides a pressurized environment on front end of the cryostats which prevents water absorption into the window material.  The lip rings at the
+ends of the unions additionally provide data and power connections to
 electronics across separately rotating stages of the mount. These rotary unions
 allow the helium compressors---required to operate the pulse tube coolers---to
 sit well below the mount structure in the stationary tower. Helium lines route
@@ -446,7 +453,7 @@ upwards into the lower (ground fixed) half of the first rotary union and then
 out through the upper half which rotates in azimuth along with the receivers.
 The hoses from the upper half are then routed through a short cable chain that
 provides flexure when rotating in elevation. The second rotary union is then
-similarly connected across the elevation and boresight axes.
+similarly connected between the elevation and boresight stages.
 
 
 
@@ -457,7 +464,7 @@ These will be augmented by two dual-band receivers at 30/40 GHz and 220/270
 GHz.  The 30/40 GHz receiver will extend the observations into two new bands at
 which the synchrotron foreground is expected to dominate. The \keckarray\ is
 already observing in the 220 and 270 GHz bands.  However with significantly
-increased throughput and a detector count of over 9 times the entire
+increased throughput, and a detector count of over 8 times the entire
 \keckarray, the dual band 220/270 GHz \biceparray\ receiver will rapidly
 eclipse current sensitivity. In only a few days of observation, this receiver
 will surpass the dust sensitivity of the \planck\ 353 GHz data in the \bk\
@@ -469,15 +476,6 @@ galactic synchrotron and dust further than the currently available data.
 
 
 
-The 30/40 GHz receiver will extend the observations into two
-new bands at which the synchrotron foreground is expected to dominate. The
-\keckarray\ is already observing in the 220 and 270 GHz bands.  However with
-significantly increased throughput and a detector count of over 8 times the
-entire \keckarray, the dual band 220/270 GHz \biceparray\ receiver will rapidly
-eclipse current sensitivity. In only a few days of observation,
-this receiver will surpass the dust sensitivity of the \planck\ 353 GHz data in
-the \bk\ field. 
-
 The observing power of \biceparray\ will be concentrated on the same $\sim400
 \text{ deg}^2$ ($\sim 600 \text{deg}^2$ for \bicep3 generation) patch of sky as the existing \bk\ data. By directly
 observing cosmological foregrounds with the new dual band receivers in the
@@ -485,12 +483,17 @@ patch at which the \bk\ data is already the deepest, we will be able to
 directly constrain these foregrounds in our own patch of sky, significantly
 reducing the effect of any spatial variation in the foregrounds' spectral
 energy distribution. Increasing foreground constraints will be complemented by
-simultaneously increasing sensitivity to $r$ with the single band receivers. Figure~\ref{fig:projections} shows the sensitivity projections for \biceparray. All projections are based on achieved sensitivity and as such, build in real world inefficiencies such as detector yield, weather, and other factors which decrease overall sensitivity. By the end of the program, \biceparray\ is projected to constrain $r<0.008$, $\sigma (r)<0.004$.
+simultaneously increasing sensitivity to $r$ with the single band receivers.
+Figure~\ref{fig:projections} shows the sensitivity projections for \biceparray.
+All projections are based on achieved sensitivity and as such, build in real
+world inefficiencies such as detector yield, weather, and other factors which
+decrease overall sensitivity. By the end of the program, \biceparray\ is
+projected to constrain $r<0.008$ ($95\%$ confidence), $\sigma (r)<0.004$.
 
 
-\begin{figure}[hb]
+\begin{figure}[b]
 \center
-\includegraphics[scale=0.4]{projections.pdf}
+\includegraphics[scale=0.5]{projections.pdf}
 \caption{Achieved and projected sensitivity for the current and planned \bk\
 program. \textbf{Top:} A representation of receiver throughput at different
 frequencies. \textbf{Middle:} Achieved and projected map depth at various
@@ -509,9 +512,37 @@ Raw sensitivity in the absence of foregrounds is also shown.}
 
 
 
+
+
+\section{Acknowledgements}
+
+
+The \bk\ projects  have  been  made possible through a series of grants from the
+National Science  Foundation  including  0742818,  0742592,  1044978, 1110087,
+1145172, 1145143, 1145248, 1639040, 1638957, 1638978, 1638970, \& 1726917, by
+the Gordon and Betty Moore Foundation, and by the Keck Foundation.  The
+development of antenna-coupled detector technology was supported by the JPL
+Research and Technology Development Fund and NASA Grants 06-ARPA206-0040, 10-
+SAT10-0017, 12-SAT12-0031, 14-SAT14-0009 \& 16-SAT- 16-0002.   The  development
+and  testing  of  focal  planes were supported by the Gordon and Betty Moore
+Foundation at Caltech.  Readout electronics were supported by a Canada
+Foundation for Innovation grant to UBC.  The computations in this paper were
+run on the Odyssey cluster supported by the FAS Science Division Research
+Computing Group at Harvard University.  The analysis effort at  Stanford  and
+SLAC  is  partially  supported  by the  U.S.  DoE  Office of  Science.   We
+thank  the  staff  of the U.S. Antarctic Program and in particular the South
+Pole Station without whose help this research would not have been possible.
+Most special thanks go to our heroic winter-overs  Robert Schwarz  and  Steffen
+Richter.   We thank all those who have contributed past efforts to the
+\bk\ series of experiments, including the \bicep1 team.
+
+
 \clearpage
+
+
+
 % References
-\bibliography{cmb,misc,bicepkeck} % bibliography data in report.bib
-\bibliographystyle{spiebib} % makes bibtex use spiebib.bst
+\bibliography{cmb,misc,bicepkeck}
+\bibliographystyle{spiebib}
 
 \end{document} 
